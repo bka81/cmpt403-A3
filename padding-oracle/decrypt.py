@@ -19,14 +19,15 @@ msg = bytearray(b"When you see this, it's very likely that your decryption works
 open("plaintext.txt", "wb").close()
 num_blocks = len(ciphertext_data) // 16
 for c in range(0, num_blocks - 1):
+
     y_prev = ciphertext_data[(c * 16) : ((c + 1) * 16)] 
     y_curr = ciphertext_data[((c + 1) * 16) : ((c + 2) * 16)]
     
 
     #PART 1: DECRYPT BYTE:
 
-    yN = y_prev
-    yN_prev = y_curr
+    yN = y_curr
+    yN_prev = y_prev
 
     # generate a random array of 16 bytes then change the last to try i value
     block_r = bytearray(os.urandom(16))
