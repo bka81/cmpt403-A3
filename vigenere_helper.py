@@ -28,7 +28,7 @@ if __name__ == "__main__":
     # all the unique words in the text
     total_words = list(set(words))
     
-    # get the positions of the words in the text with their repaated positions
+    # get the positions of the words in the text with their repeated positions
     positions_unique = [[] for i in range(len(total_words))]
 
     for i in range(len(total_words)):
@@ -62,11 +62,14 @@ if __name__ == "__main__":
         print(f"Divisors for {unique_words_positions[i][0]} : {divisors[i]}")            
 
     # note that the most repeated divisor accross different words and distances was 7. 
+
+    #remove all the space in the cipher text:
     ciphertext_no_spaces = []
     for char in vigeneretext:
         if char.isalpha():
             ciphertext_no_spaces.append(char)
     
+    #partition the text into lengths of 7.
     grid = []
     index = 0
     while(index < len(ciphertext_no_spaces)) :

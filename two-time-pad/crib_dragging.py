@@ -6,7 +6,7 @@ with open("ctext0", "rb") as f:
 with open("ctext1", "rb") as f:
     ctext1_bytes = f.read()
 
-with open("words1.txt", "r", encoding="utf-8") as f:
+with open("words2.txt", "r", encoding="utf-8") as f:
     words_p = f.read()
 
 words_letter_p = words_p

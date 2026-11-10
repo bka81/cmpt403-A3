@@ -21,7 +21,7 @@ def vigenere_decrypt(vigeneretext: str, key: str) -> str:
             key_index += 1  # Advance key only for letters
         elif char.isspace():
             decrypted_plaintext.append(' ')
-        # else: skip (remove) punctuation, numbers, etc.
+       
 
     return ''.join(decrypted_plaintext)
 
